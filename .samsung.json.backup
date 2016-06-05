@@ -1,0 +1,258 @@
+[
+    {
+        "type": "tab",
+        "id": "334cf31e.e5bd5c",
+        "label": "Flow 1"
+    },
+    {
+        "id": "d6291d4d.151c4",
+        "type": "ui_tab",
+        "z": "334cf31e.e5bd5c",
+        "name": "TV",
+        "icon": "dashboard",
+        "order": "1"
+    },
+    {
+        "id": "1889a979.3dad07",
+        "type": "samsung-tv",
+        "z": "334cf31e.e5bd5c",
+        "name": "Sam",
+        "address": "192.168.1.106"
+    },
+    {
+        "id": "273c744d.6ef3bc",
+        "type": "samsung-tv-send",
+        "z": "334cf31e.e5bd5c",
+        "device": "1889a979.3dad07",
+        "name": "",
+        "key": "KEY_VOLDOWN",
+        "x": 957,
+        "y": 207.99999237060547,
+        "wires": []
+    },
+    {
+        "id": "df192355.ed892",
+        "type": "samsung-tv-send",
+        "z": "334cf31e.e5bd5c",
+        "device": "1889a979.3dad07",
+        "name": "",
+        "key": "KEY_VOLUP",
+        "x": 957,
+        "y": 107.99999237060547,
+        "wires": []
+    },
+    {
+        "id": "6dd33210.dc0a3c",
+        "type": "ui_button",
+        "z": "334cf31e.e5bd5c",
+        "tab": "d6291d4d.151c4",
+        "name": "VOL UP",
+        "payload": "",
+        "topic": "",
+        "group": "Volume",
+        "order": "2",
+        "x": 727,
+        "y": 107.99999237060547,
+        "wires": [
+            [
+                "df192355.ed892"
+            ]
+        ]
+    },
+    {
+        "id": "4f24ba7f.9757f4",
+        "type": "ui_button",
+        "z": "334cf31e.e5bd5c",
+        "tab": "d6291d4d.151c4",
+        "name": "VOL DOWN",
+        "payload": "",
+        "topic": "",
+        "group": "Volume",
+        "order": "2",
+        "x": 717,
+        "y": 207.99999237060547,
+        "wires": [
+            [
+                "273c744d.6ef3bc"
+            ]
+        ]
+    },
+    {
+        "id": "2580b8b1.0b1cc8",
+        "type": "samsung-tv-send",
+        "z": "334cf31e.e5bd5c",
+        "device": "1889a979.3dad07",
+        "name": "",
+        "key": "KEY_MUTE",
+        "x": 957,
+        "y": 307.99999237060547,
+        "wires": []
+    },
+    {
+        "id": "98e20880.9612e8",
+        "type": "ui_button",
+        "z": "334cf31e.e5bd5c",
+        "tab": "d6291d4d.151c4",
+        "name": "Mute",
+        "payload": "",
+        "topic": "",
+        "group": "Volume",
+        "order": "2",
+        "x": 737,
+        "y": 307.99999237060547,
+        "wires": [
+            [
+                "2580b8b1.0b1cc8"
+            ]
+        ]
+    },
+    {
+        "id": "8b6bc023.31edb",
+        "type": "samsung-tv-send",
+        "z": "334cf31e.e5bd5c",
+        "device": "1889a979.3dad07",
+        "name": "",
+        "key": "KEY_POWER",
+        "x": 397,
+        "y": 507.99999237060547,
+        "wires": []
+    },
+    {
+        "id": "c2149a9b.caa978",
+        "type": "inject",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 187,
+        "y": 507.99999237060547,
+        "wires": [
+            [
+                "8b6bc023.31edb"
+            ]
+        ]
+    },
+    {
+        "id": "eb7e199b.751d18",
+        "type": "samsung-tv-send",
+        "z": "334cf31e.e5bd5c",
+        "device": "1889a979.3dad07",
+        "name": "",
+        "key": "KEY_HDMI",
+        "x": 397,
+        "y": 107.99999237060547,
+        "wires": []
+    },
+    {
+        "id": "b5fd195a.ed7d78",
+        "type": "inject",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 187,
+        "y": 467.99999237060547,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f02b1e3.3f7ee",
+        "type": "inject",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 187,
+        "y": 547.9999923706055,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d17577f0.21bc78",
+        "type": "samsung-tv-send",
+        "z": "334cf31e.e5bd5c",
+        "device": "1889a979.3dad07",
+        "name": "",
+        "key": "KEY_POWEROFF",
+        "x": 397,
+        "y": 187.99999237060547,
+        "wires": []
+    },
+    {
+        "id": "e7eea491.b9fd88",
+        "type": "ui_button",
+        "z": "334cf31e.e5bd5c",
+        "tab": "d6291d4d.151c4",
+        "name": "HDMI",
+        "payload": "",
+        "topic": "",
+        "group": "Control",
+        "order": 1,
+        "x": 157,
+        "y": 107.99999237060547,
+        "wires": [
+            [
+                "eb7e199b.751d18"
+            ]
+        ]
+    },
+    {
+        "id": "a50f96e8.3d4248",
+        "type": "ui_button",
+        "z": "334cf31e.e5bd5c",
+        "tab": "d6291d4d.151c4",
+        "name": "Power Off",
+        "payload": "",
+        "topic": "",
+        "group": "Control",
+        "order": "2",
+        "x": 147,
+        "y": 187.99999237060547,
+        "wires": [
+            [
+                "d17577f0.21bc78"
+            ]
+        ]
+    },
+    {
+        "id": "e2e4e11.f0ddc2",
+        "type": "status",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "scope": null,
+        "x": 281,
+        "y": 327,
+        "wires": [
+            [
+                "83503652.a55e78"
+            ]
+        ]
+    },
+    {
+        "id": "83503652.a55e78",
+        "type": "ui_text",
+        "z": "334cf31e.e5bd5c",
+        "tab": "d6291d4d.151c4",
+        "name": "Text",
+        "group": "Debug",
+        "order": "3",
+        "format": "{{msg.payload}}",
+        "x": 453,
+        "y": 328,
+        "wires": []
+    }
+]
