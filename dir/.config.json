@@ -358,6 +358,21 @@
     }
    }
   },
+  "node-red-contrib-samsungTV": {
+   "name": "node-red-contrib-samsungTV",
+   "version": "0.1.1",
+   "nodes": {
+    "samsungTV": {
+     "name": "samsungTV",
+     "types": [
+      "samsungTV"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-samsungTV",
+     "file": "C:\\Users\\geo-m\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\node-red-contrib-samsungTV\\samsungTV.js"
+    }
+   }
+  },
   "node-red-contrib-swagger": {
    "name": "node-red-contrib-swagger",
    "version": "0.3.2",

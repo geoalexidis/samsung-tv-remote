@@ -13,35 +13,6 @@
         "order": "1"
     },
     {
-        "id": "1889a979.3dad07",
-        "type": "samsung-tv",
-        "z": "334cf31e.e5bd5c",
-        "name": "Sam",
-        "address": "192.168.1.106"
-    },
-    {
-        "id": "273c744d.6ef3bc",
-        "type": "samsung-tv-send",
-        "z": "334cf31e.e5bd5c",
-        "device": "1889a979.3dad07",
-        "name": "",
-        "key": "KEY_VOLDOWN",
-        "x": 957,
-        "y": 207.99999237060547,
-        "wires": []
-    },
-    {
-        "id": "df192355.ed892",
-        "type": "samsung-tv-send",
-        "z": "334cf31e.e5bd5c",
-        "device": "1889a979.3dad07",
-        "name": "",
-        "key": "KEY_VOLUP",
-        "x": 957,
-        "y": 107.99999237060547,
-        "wires": []
-    },
-    {
         "id": "6dd33210.dc0a3c",
         "type": "ui_button",
         "z": "334cf31e.e5bd5c",
@@ -51,11 +22,11 @@
         "topic": "",
         "group": "Volume",
         "order": "2",
-        "x": 727,
-        "y": 107.99999237060547,
+        "x": 107.00003051757812,
+        "y": 271.99998474121094,
         "wires": [
             [
-                "df192355.ed892"
+                "523f9241.5cbbec"
             ]
         ]
     },
@@ -69,24 +40,13 @@
         "topic": "",
         "group": "Volume",
         "order": "2",
-        "x": 717,
-        "y": 207.99999237060547,
+        "x": 113,
+        "y": 351.99996185302734,
         "wires": [
             [
-                "273c744d.6ef3bc"
+                "ac4ae647.329518"
             ]
         ]
-    },
-    {
-        "id": "2580b8b1.0b1cc8",
-        "type": "samsung-tv-send",
-        "z": "334cf31e.e5bd5c",
-        "device": "1889a979.3dad07",
-        "name": "",
-        "key": "KEY_MUTE",
-        "x": 957,
-        "y": 307.99999237060547,
-        "wires": []
     },
     {
         "id": "98e20880.9612e8",
@@ -98,99 +58,13 @@
         "topic": "",
         "group": "Volume",
         "order": "2",
-        "x": 737,
-        "y": 307.99999237060547,
+        "x": 137,
+        "y": 411.99999237060547,
         "wires": [
             [
-                "2580b8b1.0b1cc8"
+                "b35c662b.8a4688"
             ]
         ]
-    },
-    {
-        "id": "8b6bc023.31edb",
-        "type": "samsung-tv-send",
-        "z": "334cf31e.e5bd5c",
-        "device": "1889a979.3dad07",
-        "name": "",
-        "key": "KEY_POWER",
-        "x": 397,
-        "y": 507.99999237060547,
-        "wires": []
-    },
-    {
-        "id": "c2149a9b.caa978",
-        "type": "inject",
-        "z": "334cf31e.e5bd5c",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 187,
-        "y": 507.99999237060547,
-        "wires": [
-            [
-                "8b6bc023.31edb"
-            ]
-        ]
-    },
-    {
-        "id": "eb7e199b.751d18",
-        "type": "samsung-tv-send",
-        "z": "334cf31e.e5bd5c",
-        "device": "1889a979.3dad07",
-        "name": "",
-        "key": "KEY_HDMI",
-        "x": 397,
-        "y": 107.99999237060547,
-        "wires": []
-    },
-    {
-        "id": "b5fd195a.ed7d78",
-        "type": "inject",
-        "z": "334cf31e.e5bd5c",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 187,
-        "y": 467.99999237060547,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7f02b1e3.3f7ee",
-        "type": "inject",
-        "z": "334cf31e.e5bd5c",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 187,
-        "y": 547.9999923706055,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d17577f0.21bc78",
-        "type": "samsung-tv-send",
-        "z": "334cf31e.e5bd5c",
-        "device": "1889a979.3dad07",
-        "name": "",
-        "key": "KEY_POWEROFF",
-        "x": 397,
-        "y": 187.99999237060547,
-        "wires": []
     },
     {
         "id": "e7eea491.b9fd88",
@@ -202,11 +76,11 @@
         "topic": "",
         "group": "Control",
         "order": 1,
-        "x": 157,
-        "y": 107.99999237060547,
+        "x": 89,
+        "y": 139.9999771118164,
         "wires": [
             [
-                "eb7e199b.751d18"
+                "6ac369f1.329c28"
             ]
         ]
     },
@@ -220,39 +94,137 @@
         "topic": "",
         "group": "Control",
         "order": "2",
-        "x": 147,
-        "y": 187.99999237060547,
+        "x": 83,
+        "y": 199.99999237060547,
         "wires": [
             [
-                "d17577f0.21bc78"
+                "410bf09e.05555"
             ]
         ]
     },
     {
-        "id": "e2e4e11.f0ddc2",
-        "type": "status",
-        "z": "334cf31e.e5bd5c",
-        "name": "",
-        "scope": null,
-        "x": 281,
-        "y": 327,
-        "wires": [
-            [
-                "83503652.a55e78"
-            ]
-        ]
-    },
-    {
-        "id": "83503652.a55e78",
-        "type": "ui_text",
+        "id": "5b80360e.fb33a8",
+        "type": "ui_template",
         "z": "334cf31e.e5bd5c",
         "tab": "d6291d4d.151c4",
-        "name": "Text",
-        "group": "Debug",
+        "name": "",
+        "group": "Success",
         "order": "3",
-        "format": "{{msg.payload}}",
-        "x": 453,
-        "y": 328,
-        "wires": []
+        "format": "{{msg.success}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "x": 640,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ac369f1.329c28",
+        "type": "function",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "func": "msg.command = 'KEY_HDMI';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240.50003051757812,
+        "y": 145.00005340576172,
+        "wires": [
+            [
+                "1eca3382.f11b1c"
+            ]
+        ]
+    },
+    {
+        "id": "410bf09e.05555",
+        "type": "function",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "func": "msg.command = 'KEY_POWEROFF'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 232.50003051757812,
+        "y": 209.00003814697266,
+        "wires": [
+            [
+                "1eca3382.f11b1c"
+            ]
+        ]
+    },
+    {
+        "id": "ac4ae647.329518",
+        "type": "function",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "func": "msg.command = 'KEY_VOLDOWN'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 279.6666259765625,
+        "y": 353.66661834716797,
+        "wires": [
+            [
+                "1eca3382.f11b1c"
+            ]
+        ]
+    },
+    {
+        "id": "523f9241.5cbbec",
+        "type": "function",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "func": "msg.command = 'KEY_VOLUP'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 255.6666259765625,
+        "y": 281.66663360595703,
+        "wires": [
+            [
+                "1eca3382.f11b1c"
+            ]
+        ]
+    },
+    {
+        "id": "b35c662b.8a4688",
+        "type": "function",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "func": "msg.command = 'KEY_MUTE'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 315.6666259765625,
+        "y": 409.6666488647461,
+        "wires": [
+            [
+                "1eca3382.f11b1c"
+            ]
+        ]
+    },
+    {
+        "id": "1eca3382.f11b1c",
+        "type": "samsungTV",
+        "z": "334cf31e.e5bd5c",
+        "ip": "192.168.1.106",
+        "command": "",
+        "name": "TV",
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "5b80360e.fb33a8"
+            ]
+        ]
+    },
+    {
+        "id": "55bec51.daf6a3c",
+        "type": "samsungTV",
+        "z": "334cf31e.e5bd5c",
+        "ip": "192.168.1.106",
+        "command": "",
+        "name": "TV",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            []
+        ]
     }
 ]
