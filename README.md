@@ -6,5 +6,5 @@
 - Make the Pushover On/Off turnable
 - 
 ## Install noded
-```node-red-contrib-ui```
-```node-red-contrib-samsungTV```
+`node-red-contrib-ui`
+`node-red-contrib-samsungTV`
