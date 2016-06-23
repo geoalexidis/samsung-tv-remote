@@ -108,9 +108,9 @@
         "z": "334cf31e.e5bd5c",
         "tab": "d6291d4d.151c4",
         "name": "",
-        "group": "Status",
-        "order": "3",
-        "format": "{{msg.success}}",
+        "group": "Status Message",
+        "order": "4",
+        "format": "\n\n\n\n<!DOCTYPE html>\n<div>\n    <h4>TV On:</h4>\n    <p>{{msg.success}}</p>\n</div>\n\n<div>\n    <h4>Timestamp:</h4>\n    <p>{{msg.time}}</p>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "x": 760,
@@ -221,8 +221,8 @@
         "ip": "192.168.1.106",
         "command": "",
         "name": "TV",
-        "x": 630,
-        "y": 420,
+        "x": 550,
+        "y": 300,
         "wires": [
             []
         ]
@@ -249,16 +249,33 @@
         "id": "6f4e7ea3.7fb42",
         "type": "function",
         "z": "334cf31e.e5bd5c",
-        "name": "",
-        "func": "msg.command = 'KEY_POWER'\nreturn msg;",
+        "name": "msg.time",
+        "func": "msg.command = 'KEY_POWER'\nmsg.time = Date();\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 350,
+        "x": 360,
         "y": 380,
         "wires": [
             [
                 "1eca3382.f11b1c"
             ]
+        ]
+    },
+    {
+        "id": "a0bfda83.911688",
+        "type": "inject",
+        "z": "334cf31e.e5bd5c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 140,
+        "y": 460,
+        "wires": [
+            []
         ]
     }
 ]
