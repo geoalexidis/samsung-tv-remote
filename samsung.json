@@ -1,1 +1,299 @@
-[{"id":"334cf31e.e5bd5c","type":"tab","label":"Flow 1"},{"id":"d6291d4d.151c4","type":"ui_tab","z":"334cf31e.e5bd5c","name":"TV","icon":"dashboard","order":"1"},{"id":"660ea89a.2550b8","type":"ui_base","name":"Node-RED Dashboard","theme":"theme-light"},{"id":"19a56fe4.3f22","type":"ui_group","z":"334cf31e.e5bd5c","name":"Default","tab":"d6291d4d.151c4","disp":true,"width":"6"},{"id":"6dd33210.dc0a3c","type":"ui_button","z":"334cf31e.e5bd5c","name":"VOL UP","group":"19a56fe4.3f22","order":"2","width":"","height":"","label":"Volume Up","color":"","icon":"","payload":"","payloadType":"str","topic":"","x":160,"y":200,"wires":[["523f9241.5cbbec"]]},{"id":"4f24ba7f.9757f4","type":"ui_button","z":"334cf31e.e5bd5c","name":"VOL DOWN","group":"19a56fe4.3f22","order":"2","width":"","height":"","label":"Volume Down","color":"","icon":"","payload":"","payloadType":"str","topic":"","x":165.99996948242188,"y":259.9999771118164,"wires":[["ac4ae647.329518"]]},{"id":"98e20880.9612e8","type":"ui_button","z":"334cf31e.e5bd5c","name":"Mute","group":"19a56fe4.3f22","order":"2","width":"","height":"","label":"Mute","color":"","icon":"","payload":"","payloadType":"str","topic":"","x":150,"y":320,"wires":[["b35c662b.8a4688"]]},{"id":"e7eea491.b9fd88","type":"ui_button","z":"334cf31e.e5bd5c","name":"HDMI","group":"19a56fe4.3f22","order":1,"width":"","height":"","label":"HDMI","color":"","icon":"","payload":"","payloadType":"str","topic":"","x":150,"y":80,"wires":[["6ac369f1.329c28"]]},{"id":"a50f96e8.3d4248","type":"ui_button","z":"334cf31e.e5bd5c","name":"Power Off","group":"19a56fe4.3f22","order":"2","width":"","height":"","label":"Power Off","color":"","icon":"","payload":"","payloadType":"str","topic":"","x":160,"y":140,"wires":[["410bf09e.05555"]]},{"id":"5b80360e.fb33a8","type":"ui_template","z":"334cf31e.e5bd5c","group":"19a56fe4.3f22","name":"","order":"3","width":"","height":"","format":"{{msg.success}}","storeOutMessages":true,"fwdInMessages":false,"x":760,"y":220,"wires":[[]]},{"id":"6ac369f1.329c28","type":"function","z":"334cf31e.e5bd5c","name":"","func":"msg.command = 'KEY_HDMI';\nreturn msg;","outputs":1,"noerr":0,"x":350,"y":80,"wires":[["1eca3382.f11b1c"]]},{"id":"410bf09e.05555","type":"function","z":"334cf31e.e5bd5c","name":"","func":"msg.command = 'KEY_POWEROFF'\nreturn msg;","outputs":1,"noerr":0,"x":350,"y":140,"wires":[["1eca3382.f11b1c"]]},{"id":"ac4ae647.329518","type":"function","z":"334cf31e.e5bd5c","name":"","func":"msg.command = 'KEY_VOLDOWN'\nreturn msg;","outputs":1,"noerr":0,"x":350,"y":260,"wires":[["1eca3382.f11b1c"]]},{"id":"523f9241.5cbbec","type":"function","z":"334cf31e.e5bd5c","name":"","func":"msg.command = 'KEY_VOLUP'\nreturn msg;","outputs":1,"noerr":0,"x":350,"y":200,"wires":[["1eca3382.f11b1c"]]},{"id":"b35c662b.8a4688","type":"function","z":"334cf31e.e5bd5c","name":"","func":"msg.command = 'KEY_MUTE'\nreturn msg;","outputs":1,"noerr":0,"x":350,"y":320,"wires":[["1eca3382.f11b1c"]]},{"id":"1eca3382.f11b1c","type":"samsungTV","z":"334cf31e.e5bd5c","ip":"192.168.1.103","command":"","name":"TV","x":550,"y":220,"wires":[["5b80360e.fb33a8"]]},{"id":"55bec51.daf6a3c","type":"samsungTV","z":"334cf31e.e5bd5c","ip":"192.168.1.103","command":"","name":"TV","x":546,"y":280,"wires":[[]]},{"id":"257abf88.4d1fc","type":"ui_button","z":"334cf31e.e5bd5c","name":"Status","group":"19a56fe4.3f22","order":"3","width":"","height":"","label":"Status","color":"","icon":"","payload":"","payloadType":"str","topic":"","x":150,"y":380,"wires":[["6f4e7ea3.7fb42"]]},{"id":"6f4e7ea3.7fb42","type":"function","z":"334cf31e.e5bd5c","name":"","func":"msg.command = 'KEY_POWER'\nreturn msg;","outputs":1,"noerr":0,"x":350,"y":380,"wires":[["1eca3382.f11b1c"]]}]
+[
+  {
+    "id": "6dd33210.dc0a3c",
+    "type": "ui_button",
+    "z": "334cf31e.e5bd5c",
+    "name": "VOL UP",
+    "group": "19a56fe4.3f22",
+    "order": "2",
+    "width": "",
+    "height": "",
+    "label": "Volume Up",
+    "color": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 160,
+    "y": 200,
+    "wires": [
+      [
+        "523f9241.5cbbec"
+      ]
+    ]
+  },
+  {
+    "id": "4f24ba7f.9757f4",
+    "type": "ui_button",
+    "z": "334cf31e.e5bd5c",
+    "name": "VOL DOWN",
+    "group": "19a56fe4.3f22",
+    "order": "2",
+    "width": "",
+    "height": "",
+    "label": "Volume Down",
+    "color": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 165.99996948242188,
+    "y": 259.9999771118164,
+    "wires": [
+      [
+        "ac4ae647.329518"
+      ]
+    ]
+  },
+  {
+    "id": "98e20880.9612e8",
+    "type": "ui_button",
+    "z": "334cf31e.e5bd5c",
+    "name": "Mute",
+    "group": "19a56fe4.3f22",
+    "order": "2",
+    "width": "",
+    "height": "",
+    "label": "Mute",
+    "color": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 150,
+    "y": 320,
+    "wires": [
+      [
+        "b35c662b.8a4688"
+      ]
+    ]
+  },
+  {
+    "id": "e7eea491.b9fd88",
+    "type": "ui_button",
+    "z": "334cf31e.e5bd5c",
+    "name": "HDMI",
+    "group": "19a56fe4.3f22",
+    "order": 1,
+    "width": "",
+    "height": "",
+    "label": "HDMI",
+    "color": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 150,
+    "y": 80,
+    "wires": [
+      [
+        "6ac369f1.329c28"
+      ]
+    ]
+  },
+  {
+    "id": "a50f96e8.3d4248",
+    "type": "ui_button",
+    "z": "334cf31e.e5bd5c",
+    "name": "Power Off",
+    "group": "19a56fe4.3f22",
+    "order": "2",
+    "width": "",
+    "height": "",
+    "label": "Power Off",
+    "color": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 160,
+    "y": 140,
+    "wires": [
+      [
+        "410bf09e.05555"
+      ]
+    ]
+  },
+  {
+    "id": "5b80360e.fb33a8",
+    "type": "ui_template",
+    "z": "334cf31e.e5bd5c",
+    "group": "19a56fe4.3f22",
+    "name": "",
+    "order": "3",
+    "width": "",
+    "height": "",
+    "format": "{{msg.success}}",
+    "storeOutMessages": true,
+    "fwdInMessages": false,
+    "x": 760,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6ac369f1.329c28",
+    "type": "function",
+    "z": "334cf31e.e5bd5c",
+    "name": "",
+    "func": "msg.command = 'KEY_HDMI';\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 80,
+    "wires": [
+      [
+        "1eca3382.f11b1c"
+      ]
+    ]
+  },
+  {
+    "id": "410bf09e.05555",
+    "type": "function",
+    "z": "334cf31e.e5bd5c",
+    "name": "",
+    "func": "msg.command = 'KEY_POWEROFF'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 140,
+    "wires": [
+      [
+        "1eca3382.f11b1c"
+      ]
+    ]
+  },
+  {
+    "id": "ac4ae647.329518",
+    "type": "function",
+    "z": "334cf31e.e5bd5c",
+    "name": "",
+    "func": "msg.command = 'KEY_VOLDOWN'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 260,
+    "wires": [
+      [
+        "1eca3382.f11b1c"
+      ]
+    ]
+  },
+  {
+    "id": "523f9241.5cbbec",
+    "type": "function",
+    "z": "334cf31e.e5bd5c",
+    "name": "",
+    "func": "msg.command = 'KEY_VOLUP'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 200,
+    "wires": [
+      [
+        "1eca3382.f11b1c"
+      ]
+    ]
+  },
+  {
+    "id": "b35c662b.8a4688",
+    "type": "function",
+    "z": "334cf31e.e5bd5c",
+    "name": "",
+    "func": "msg.command = 'KEY_MUTE'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 320,
+    "wires": [
+      [
+        "1eca3382.f11b1c"
+      ]
+    ]
+  },
+  {
+    "id": "1eca3382.f11b1c",
+    "type": "samsungTV",
+    "z": "334cf31e.e5bd5c",
+    "ip": "192.168.1.103",
+    "command": "",
+    "name": "TV",
+    "x": 550,
+    "y": 220,
+    "wires": [
+      [
+        "5b80360e.fb33a8"
+      ]
+    ]
+  },
+  {
+    "id": "55bec51.daf6a3c",
+    "type": "samsungTV",
+    "z": "334cf31e.e5bd5c",
+    "ip": "192.168.1.103",
+    "command": "",
+    "name": "TV",
+    "x": 550,
+    "y": 300,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "257abf88.4d1fc",
+    "type": "ui_button",
+    "z": "334cf31e.e5bd5c",
+    "name": "Status",
+    "group": "19a56fe4.3f22",
+    "order": "3",
+    "width": "",
+    "height": "",
+    "label": "Status",
+    "color": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 150,
+    "y": 380,
+    "wires": [
+      [
+        "6f4e7ea3.7fb42"
+      ]
+    ]
+  },
+  {
+    "id": "6f4e7ea3.7fb42",
+    "type": "function",
+    "z": "334cf31e.e5bd5c",
+    "name": "",
+    "func": "msg.command = 'KEY_POWER'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 350,
+    "y": 380,
+    "wires": [
+      [
+        "1eca3382.f11b1c"
+      ]
+    ]
+  },
+  {
+    "id": "19a56fe4.3f22",
+    "type": "ui_group",
+    "z": "334cf31e.e5bd5c",
+    "name": "Default",
+    "tab": "d6291d4d.151c4",
+    "disp": true,
+    "width": "6"
+  },
+  {
+    "id": "d6291d4d.151c4",
+    "type": "ui_tab",
+    "z": "334cf31e.e5bd5c",
+    "name": "TV",
+    "icon": "dashboard",
+    "order": "1"
+  }
+]
